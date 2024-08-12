@@ -42,6 +42,10 @@ header {
     margin: 40px 0;
     text-align: center;
 }
+
+.hidden {
+    display: none;
+}
 /* Navbar */
 .main-nav {
     display: flex;
@@ -132,14 +136,55 @@ header::before {
 /* Project Section */
 
 .card {
-    /* width: 250px; */
+    position: relative;
+    display: flex;
+    flex-direction: column;
     height: 250px;
     flex: 1;
     background-color: white;
     border-radius: 5px;
+    color: var(--bg-dark);
 
 }
 
+.card h3 {
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    flex: 1;
+}
+
+.card .card-body {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card::before{
+    display: flex;
+    opacity: 0;
+    justify-content: center;
+    align-items: center;
+    content: "View Project";
+    background-color: rgba(0, 0, 0, .5);
+    color: white;
+    font-size: 2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 300ms;
+
+}
+
+.card:hover::before{
+    opacity: 1;
+    cursor: pointer;
+}
 #projects .gallery {
     display:  flex;
     justify-content: space-evenly;
@@ -231,4 +276,80 @@ header::before {
 .main-footer .socials ul li a {
     font-size: 2.1rem;
     color: var(--text-light);
+}
+
+/* Modal Window */
+.modal-window{
+    display: flex;
+   position: fixed;
+   width: 100%;
+   height: 100vh;
+   top: 0;
+   left: 0;
+   justify-content: center;
+   align-items: center;
+   background-color: rgba(0, 0, 0, .4);
+   z-index: 2;
+
+}
+
+.modal {
+    display: grid;   
+    background-color: white;
+    color: var(--bg-dark);
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 800px;
+    height: 500px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    grid-template-areas: 
+    "header header"
+    "img info"
+    "links info"
+    ;
+    transition: display 500ms;
+}
+
+.modal-img img {
+    width: 100%;
+    border-radius: 5px;
+
+}
+
+.modal-header {
+    text-align: center;
+    grid-area: header;
+    /* margin: 20px 0; */
+
+}
+
+.modal-img {
+    grid-area: img;
+    padding: 10px;
+    align-self: end;
+}
+
+.modal-info {
+    grid-area: info;
+    padding: 20px;
+    align-self: start;
+    line-height: 1.6;
+}
+
+.modal-links {
+    display: flex;
+    grid-area: links;
+    justify-content: space-evenly;
+    
+}
+.modal-links a {
+    text-decoration: none;
+    color: var(--bg-dark);
+}
+.hidden {
+    display: none;
 }
