@@ -1,7 +1,10 @@
 :root{
+    scroll-behavior: smooth;
     --text-light: #fff;
     --bg-dark: #000;
+    --bg-light: #fff;
     --bg-accent: #6b6898;
+
 }
 
 * {
@@ -135,13 +138,23 @@ header::before {
 
 /* Project Section */
 
-.card {
+#projects {
+    padding: 50px;
+}
+
+#projects .gallery {
+    display:  grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 50px;
+}
+#projects .card {
     position: relative;
     display: flex;
     flex-direction: column;
-    height: 250px;
-    flex: 1;
-    background-color: white;
+    /* height: 250px; */
+    /* flex: 1; */
+    background-color: var(--bg-light);
     border-radius: 5px;
     color: var(--bg-dark);
 
@@ -185,14 +198,7 @@ header::before {
     opacity: 1;
     cursor: pointer;
 }
-#projects .gallery {
-    display:  flex;
-    justify-content: space-evenly;
-    gap: 35px;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 50px;
-}
+
 
 /* Contact Section */
 #contact {
