@@ -5,6 +5,7 @@
     --bg-light: #fff;
     --bg-accent: #6b6898;
     --text-accent: #F28123;
+    --section-height: 100vh
 
 }
 
@@ -70,8 +71,8 @@ header {
 }
 
 .main-nav .nav-start .navbar-brand {
-    font-size: 1.5rem;
-    margin: 0 5px;
+    font-size: 1.7rem;
+    margin: 0 10px;
 }
 .main-nav .nav-start .nav-links {
     display: flex;
@@ -84,7 +85,21 @@ header {
     text-decoration: none;
     padding: 0 10px;
     color: var(--text-light);
+    font-size: 1.3rem;
+    transition: color 300ms;
 
+}
+
+.main-nav .nav-start .nav-links li a:hover{
+    color: var(--text-accent);
+}
+
+.main-nav .nav-end .btn{
+    transition: background-color 300ms;
+}
+.main-nav .nav-end .btn:hover {
+    background-color: var(--bg-accent);
+    color: var(--text-light);
 }
 
 /* Hero Sectop */
@@ -123,6 +138,7 @@ header::before {
 
 #about {
     padding: 50px;
+    height: var(--section-height);
 }
 #about p {
     margin: 30px 0;
@@ -135,18 +151,20 @@ header::before {
     text-decoration: none;
 }
 #about .gallery {
+    margin-top: 50px;
     width: 100%;
     display: flex;
     justify-content: space-evenly;
 } 
 #about .gallery i {
-    font-size: 8rem;
+    font-size: 10rem;
 }
 
 /* Project Section */
 
 #projects {
     padding: 50px;
+    height: var(--section-height);
 }
 
 #projects .gallery {
@@ -160,8 +178,6 @@ header::before {
     position: relative;
     display: flex;
     flex-direction: column;
-    /* height: 250px; */
-    /* flex: 1; */
     background-color: var(--bg-light);
     border-radius: 10px;
     color: var(--bg-dark);
@@ -212,6 +228,7 @@ header::before {
 
 /* Contact Section */
 #contact {
+    height: calc(var(--section-height) - 70px);
     background-color: var(--bg-accent);
     width: 100%;
     padding: 50px 0;
@@ -252,6 +269,13 @@ header::before {
 #contact button {
     background-color: #000;
     cursor: pointer;
+    padding: 17px 35px;
+    font-size: 1.2rem;
+    transition: background 200ms;
+}
+
+#contact button:hover {
+    background-color: rgba(0, 0, 0, .8);
 }
 
 /* Footer */
@@ -339,7 +363,6 @@ header::before {
 .modal-header {
     text-align: center;
     grid-area: header;
-    /* margin: 20px 0; */
 
 }
 
