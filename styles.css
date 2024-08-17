@@ -5,7 +5,7 @@
     --bg-light: #fff;
     --bg-accent: #6b6898;
     --text-accent: #F28123;
-    --section-height: 100vh
+    --section-height: 75vh
 
 }
 
@@ -43,7 +43,7 @@ header {
 }
 
 .section-header {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
     margin: 40px 0;
     text-align: center;
 }
@@ -114,13 +114,13 @@ header .hero {
 }
 
 header .hero h1 {
-    font-size: 6rem;
+    font-size: 5.3rem;
     margin-bottom: 15px;
     font-weight: 400;
 }
 
 header .hero p {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     font-weight: 200;
 }
 header::before {
@@ -314,10 +314,14 @@ header::before {
 }
 
 .main-footer .socials ul li a {
-    font-size: 2.1rem;
+    font-size: 2.5rem;
     color: var(--text-light);
+    transition: color 300ms;
 }
 
+.main-footer .socials ul li a:hover {
+    color: #ccc;
+}
 /* Modal Window */
 .modal-window{
     display: flex;
@@ -389,6 +393,7 @@ header::before {
     text-decoration: none;
     color: var(--bg-dark);
 }
+
 .hidden {
     display: none;
 }
