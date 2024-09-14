@@ -155,9 +155,11 @@ header::before {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 } 
 #about .gallery i {
     font-size: 10rem;
+    margin: 10px;
 }
 
 /* Project Section */
@@ -289,6 +291,7 @@ header::before {
 .main-footer .container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .main-footer .socials {
@@ -345,7 +348,8 @@ header::before {
     justify-content: center;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    width: 800px;
+    width: 90%;
+    max-width: 800px;
     height: 500px;
     padding: 10px;
     border: 1px solid black;
@@ -396,4 +400,206 @@ header::before {
 
 .hidden {
     display: none;
+}
+
+/* Responsive Design */
+
+@media (max-width: 1099px) {
+    .main-nav {
+        padding: 25px 20px;
+    }
+
+    #about, #projects{
+        height: 70vh;
+    } 
+
+    #contact {
+        padding: 50px 40px;
+        height: 60vh;
+    }
+
+    .main-footer {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 900px){
+    header .hero {
+        height: 75vh;
+    }
+    header .hero h1 {
+        font-size: 4rem;
+    }
+
+    header .hero p {
+        font: 1.3rem;
+    }
+    #about .gallery i {
+        font-size: 7rem;
+    }
+    #about p {
+        margin: 20px 0;
+        font-size: 1.2rem;
+        line-height: 1.6;
+    }
+}
+
+@media (max-width: 800px){
+    header .hero h1 {
+        font-size: 3.5rem;
+    }
+
+    header .hero p {
+        font: 1rem;
+    }
+
+    .section-header {
+        font-size: 2rem;
+    }
+    #about .gallery i {
+        font-size: 6rem;
+    }
+    #about, #projects{
+        height: auto;
+    } 
+
+    #projects {
+        padding: 50px 30px;
+    }
+
+    .main-nav .nav-start .navbar-brand {
+        font-size: 1.3rem;
+        margin: 0 10px;
+    }
+
+    #contact form button {
+        padding: 12px 30px;
+        font-size: 1rem;
+
+    }
+
+    .main-footer {
+        font-size: 1rem;
+    }
+
+    .main-footer .socials ul li a {
+        font-size: 1.7rem;
+    }
+
+}
+
+@media (max-width: 700px){
+    .card-title {
+        font-size: 1.2rem;
+    }
+
+    #contact {
+        padding: 50px 15px;
+        height: 60vh;
+    }
+}
+
+@media (max-width: 600px){
+    #projects .gallery{
+        grid-template-columns: 1fr;
+        padding: 10px;
+
+    }
+
+    .modal-window {
+        padding: 0 5px;
+    }
+    .modal {
+        width: 100%;
+        padding: 20px 0;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "header"
+        "img"
+        "info"
+        "links"
+        ;
+    }
+    .modal .modal-img {
+        padding: 0;
+    }
+    .modal .modal-img img {
+        border-radius: 0;
+    }
+}
+
+@media (max-width: 500px){
+    header {
+        min-height: 75vh;
+    }
+    header .hero h1 {
+        font-size: 3rem;
+    }
+
+    header .hero p {
+        font: .5rem;
+    }
+    #about p {
+        font-size: 1rem;
+    }
+    #about .gallery i {
+        font-size: 5rem;
+    }
+    #about .gallery {
+        flex-wrap: wrap;
+    }
+    #projects .gallery{
+        padding: 10px;
+
+    }
+    #contact {
+        padding: 20px 10px;
+        height: 50vh;
+    }
+    #contact form button {
+        display: block;
+        width: 100%;
+    }
+
+    .modal p {
+        font-size: .9rem;
+    }
+
+    .modal .modal-links {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .modal-links a {
+        padding: 5px;
+    }
+
+}
+
+@media (max-width: 450px){
+    .main-nav .nav-start .nav-links li a {
+        font-size: 1.1rem;
+    }
+    #contact {
+        height: auto;
+        padding: 20px 0;
+    }
+
+    #contact form {
+        width: 100%;
+        border-radius: 0;
+        padding: 30px 15px;
+    }
+    .main-footer .container {
+        flex-direction: column;
+    }
+    .main-footer .container .socials {
+        margin-top: 13px;
+    }
+
+    .main-footer .socials ul li {
+        padding: 0 5px;
+        cursor: pointer;
+    }
 }
