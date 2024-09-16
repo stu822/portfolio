@@ -616,7 +616,7 @@ header::before {
     }
 
     header .hero p {
-        font: .5rem;
+        font-size: 2rem;
     }
     #about p {
         font-size: 1rem;
