@@ -467,16 +467,10 @@ header::before {
 }
 
 /* Responsive Design */
-@media (max-width: ) {
-}
+
 @media (max-width: 1099px) {
   .main-nav {
     padding: 25px 20px;
-  }
-
-  #about,
-  #projects {
-    /* height: 70vh; */
   }
 
   #contact {
