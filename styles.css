@@ -25,7 +25,7 @@ header {
   display: flex;
   flex-direction: column;
   width: 100%;
-  background: url("imgs/bogota-laptop-midjourney.png") no-repeat center / cover;
+  background: url("imgs/bogota-laptop-midjourney.jpg") no-repeat center / cover;
   min-height: 100vh;
 }
 /* Utilities */
